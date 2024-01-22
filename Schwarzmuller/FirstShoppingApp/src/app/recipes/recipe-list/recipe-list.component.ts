@@ -13,6 +13,11 @@ export class RecipeListComponent implements OnInit {
       'This is simple a test',
       'https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Dum-Aloo-e163632.jpg?resize=768,574'
     ),
+    new Recipe(
+      'A test Recipe',
+      'This is simple a test',
+      'https://images.immediate.co.uk/production/volatile/sites/2/2019/04/Dum-Aloo-e163632.jpg?resize=768,574'
+    ),
   ];
 
   constructor() {}

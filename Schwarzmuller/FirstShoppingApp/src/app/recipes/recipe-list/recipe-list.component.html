@@ -6,11 +6,9 @@
 <hr />
 <div class="row">
   <div class="col-xs-12">
-    <!-- [recipe] jest to przekazanie z pliku .ts @Input() reipe:....  -->
     <app-recipe-item
       *ngFor="let recipeEl of recipes"
       [recipe]="recipeEl"
-      (recipeSelected)="onRecipeSelected(recipeEl)"
     ></app-recipe-item>
   </div>
 </div>

@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { AuthGuard } from './auth-guard.service';
 import { canDeactivateGuard } from './servers/edit-server/can-deactivate-guard.service';
 import { ErrorPageComponent } from './error-page/error-page.component';
-import { ServerResolver } from './servers/server/server-resolver.service';
+// import { ServerResolver } from './servers/server/server-resolver.service';
 
 const appRouts: Routes = [
   { path: '', component: HomeComponent }, //localhost:4200/users nie musiemy uzywac /
@@ -28,7 +28,7 @@ const appRouts: Routes = [
       {
         path: ':id',
         component: ServerComponent,
-        resolve: { server: ServerResolver },
+        // resolve: { server: ServerResolver },
       },
     ],
   },

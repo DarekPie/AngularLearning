@@ -6,10 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'FirstShoppingApp';
-  loadedFeature = 'recipe';
+  // title = 'FirstShoppingApp';
+  // loadedFeature = 'recipe';
 
-  onNavigate(feature: string) {
-    this.loadedFeature = feature;
-  }
+  // onNavigate(feature: string) {
+  //   this.loadedFeature = feature;
+  // }
+  
 }

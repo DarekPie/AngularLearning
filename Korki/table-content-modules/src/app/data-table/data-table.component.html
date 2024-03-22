@@ -23,7 +23,14 @@
                 <td class="p3 border-2">{{supplier.address}}</td>
                 <td class="p3 border-2">{{supplier.email}}</td>
                 <td class="p3 border-2">{{supplier.phone}}</td>
-                <td class="p3 border-2"></td>
+                <td class="p3 border-2">
+                    <button (click)="editSupplier()">
+                        <img src="assets/icons/edit.svg">
+                    </button>
+                    <button (click)="deleteSupplier()">
+                        <img src="assets/icons/delete.svg">
+                    </button>
+                </td>
             </tr>
         </tbody>
     </table>

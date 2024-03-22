@@ -5,7 +5,7 @@ import { DataService } from '../services/data.service';
 @Component({
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
-  styleUrl: './data-table.component.css',
+  styleUrl: './data-table.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DataTableComponent implements OnInit {
@@ -24,30 +24,27 @@ export class DataTableComponent implements OnInit {
   getData() {
     this.dataService.getData().subscribe((suppliers) => {
       this.suppliers = suppliers;
-      this.currentSuppliers = this.visibleData();
+      this.setCurrentSupliers();
       this.totalPages = Array(Math.ceil(this.suppliers.length / this.pageSize))
         .fill(0)
         .map((_, i) => i);
-      console.log(this.totalPages);
     });
   }
 
-  visibleData() {
-    console.log('visibleData');
+  setCurrentSupliers() {
     let startIndex = (this.currentPage - 1) * this.pageSize;
     let endIndex = startIndex + this.pageSize;
-
-    return this.suppliers.slice(startIndex, endIndex);
-  }
-
-  setCurrentSupliers() {
-    this.currentSuppliers = this.visibleData();
+    this.currentSuppliers = this.suppliers.slice(startIndex, endIndex);
   }
 
   nextPage() {
     this.currentPage++;
     this.setCurrentSupliers();
   }
+
+  editSupplier() {}
+
+  deleteSupplier() {}
 
   previousPage() {
     this.currentPage--;

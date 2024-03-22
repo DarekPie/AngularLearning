@@ -3,6 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppComponent } from './app.component';
 import { DataTableComponent } from './data-table/data-table.component';
+import { DataService } from './services/data.service';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DataTableComponent } from './data-table/data-table.component';
     BrowserModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    DataService
   ],
   bootstrap: [AppComponent]
 })

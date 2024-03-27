@@ -5,50 +5,33 @@
         <div formGroupName="userData">
           <div class="form-group">
             <label for="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              formControlName="username"
-              class="form-control"
-            />
-            <span
-              *ngIf="
+            <input type="text" id="username" formControlName="username" class="form-control" />
+            <span *ngIf="
                 !signupForm.get('userData.username').valid &&
                 signupForm.get('userData.username').touched
-              "
-              class="help-block"
-              >Please etner valid username!</span
-            >
+              " class="help-block">Please etner valid username!</span>
           </div>
           <div class="form-group">
             <label for="email">email</label>
-            <input
-              type="text"
-              id="email"
-              formControlName="email"
-              class="form-control"
-            />
-            <span
-              *ngIf="
+            <input type="text" id="email" formControlName="email" class="form-control" />
+            <span *ngIf="
                 !signupForm.get('userData.email').valid &&
                 signupForm.get('userData.email').touched
-              "
-              class="help-block"
-              >Please etner valid E-mail!</span
-            >
+              " class="help-block">Please etner valid E-mail!</span>
+          </div>
+          <div *ngIf="emailControl.value === 'test@test.pl'" class="form-group">
+            <label for="hidden">Hidden</label>
+            <input type="text" formControlName="hidden" class="form-control" />
           </div>
         </div>
-
         <div class="radio" *ngFor="let gender of genders">
           <label>
             <input type="radio" formControlName="gender" [value]="gender" />{{
-              gender
+            gender
             }}
           </label>
         </div>
-        <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block"
-          >Please etner valid data!</span
-        >
+        <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">Please etner valid data!</span>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
     </div>
